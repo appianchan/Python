@@ -14,3 +14,11 @@
 # Input: [4,1,2,1,2]
 # Output: 4
 
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        obj = defaultdict(int)
+        for x in nums:
+                obj[x] += 1
+        for y in obj:
+            if obj[y] == 1:
+                return y
